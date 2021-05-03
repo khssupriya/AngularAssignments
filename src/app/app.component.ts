@@ -16,8 +16,9 @@ export class AppComponent {
 
   toggleButtonValue: string = "Show items";
   
-  addItem(item: string) {
-    this.items.push(item)
+  addItem() {
+    this.items.push(this.item)
+    this.item = '';
   }
 
   deleteItem(ind: number) {

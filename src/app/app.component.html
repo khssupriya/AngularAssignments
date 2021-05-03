@@ -1,7 +1,7 @@
 <div class="w-50 mx-auto mt-5 text-center">
   <h1>ToDo List</h1>
-    <input type="text" name="" id="" class="form-control" #input>
-    <button class="btn btn-primary" (click) = "addItem(input.value); input.value='';">Add</button>
+    <input type="text" name="" id="" class="form-control" [(ngModel)]="item">
+    <button class="btn btn-primary" (click) = "addItem()">Add</button>
 
       <div class="my-5" *ngIf = "items.length == 0">
         <i class="fas fa-search fa-5x"></i>
