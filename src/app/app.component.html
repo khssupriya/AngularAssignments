@@ -1,27 +1,36 @@
-<div class="w-50 mx-auto mt-5 text-center">
-  <h1>ToDo List</h1>
-    <input type="text" name="" id="" class="form-control" [(ngModel)]="item">
-    <button class="btn btn-primary" (click) = "addItem()">Add</button>
-
-      <div class="my-5" *ngIf = "items.length == 0">
-        <i class="fas fa-search fa-5x"></i>
-        <p class="mt-5">No items found!</p>
-      </div>
-
-      <div class="card text-left" *ngIf = "items.length != 0">
-        <ul class="list-group list-group-flush" *ngFor="let item of items; let ind = index;">
-          <li class="list-group-item">
-            <div class="d-flex justify-content-between">
-                  <div>
-                    {{item}}
-                  </div>
-                  <div>
-                    <button (click) = "deleteItem(ind)"><i class="fas fa-trash-alt"></i></button>
-                  </div>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-
+<div class="w-50 mx-auto">
+  <h1 class="text-center m-5">User Registration Form</h1>
+  <form #ref="ngForm" (ngSubmit)="addUserData(ref)">
+    <div class="mb-3">
+      <label for="un" class="form-label">Username</label>
+      <input type="text" name="username" id="un" class="form-control" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="dob" class="form-label">DOB</label>
+      <input type="date" name="dob" id="dob" class="form-control" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email ID</label>
+      <input type="email" name="email" id="email" class="form-control" ngModel>
+    </div>
+    <button type="submit" class="d-block mx-auto m-3 btn btn-primary">Submit</button>
+  </form>
+  <div>
+    <div *ngIf="users.length==0" class="text-center">
+      <i class="fa fa-search fa-5x my-5"></i>
+      <p>No users found!</p>
+    </div>
+    <table class="table" *ngIf="users.length>0">
+      <th>Username</th>
+      <th>DOB</th>
+      <th>Email</th>
+      <tbody>
+        <tr *ngFor = "let user of users">
+          <td>{{user.username}}</td>
+          <td>{{user.dob}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

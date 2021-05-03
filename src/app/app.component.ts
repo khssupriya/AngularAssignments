@@ -6,32 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'itemsList';
 
-  item: string = "";
+  users: any[] = []
 
-  items: string[] = []
-
-  showitems: boolean = false;
-
-  toggleButtonValue: string = "Show items";
-  
-  addItem() {
-    this.items.push(this.item)
-    this.item = '';
+  addUserData(ref: any) {
+    let userObject=ref.value;
+    this.users.push(userObject);
+    ref.reset();
   }
-
-  deleteItem(ind: number) {
-    this.items.splice(ind, 1)
-  }
-
-  toggleDisplay() {
-    this.showitems = !this.showitems;
-    if(this.toggleButtonValue == "Show Items") {
-      this.toggleButtonValue = "Hide items";
-    } else {
-      this.toggleButtonValue = "Show items";
-    }
-  }
-
 }

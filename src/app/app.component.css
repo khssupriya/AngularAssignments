@@ -6,3 +6,7 @@
 .btn {
     margin: 1%;
 }
+
+.form-label {
+    display: block;
+}
