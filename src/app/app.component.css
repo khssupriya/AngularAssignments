@@ -10,3 +10,7 @@
 .form-label {
     display: block;
 }
+
+#deleteBtn {
+    margin: 0;
+}

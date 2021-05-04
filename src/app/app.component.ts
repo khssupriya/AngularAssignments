@@ -14,4 +14,8 @@ export class AppComponent {
     this.users.push(userObject);
     ref.reset();
   }
+
+  deleteUserData(ind: number) {
+    this.users.splice(ind, 1);
+  }
 }
