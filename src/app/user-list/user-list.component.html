@@ -1,0 +1,33 @@
+<div class="w-50 mx-auto">
+    <div>
+      <div *ngIf="users.length==0" class="text-center">
+        <i class="fa fa-search fa-5x my-5"></i>
+        <p>No users found!</p>
+      </div>
+      <div *ngIf="users.length>0">
+        <div *ngFor = "let user of users; let ind=index;">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex justify-content-between">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + ind">
+                  {{user.username}}
+                </button>
+                <button class="btn text-danger" id="deleteBtn" (click)="deleteUserData(ind)"> <i class="fa fa-trash-alt"></i> </button>              
+              </h2>
+              <div [attr.id]="'collapse' + ind" class="accordion-collapse collapse show" attr.data-bs-parent="accordionExample">
+                <div class="accordion-body">
+                  <div>
+                    <strong>DOB: </strong> {{user.dob}}
+                  </div>
+                  <div>
+                    <strong>Email: </strong> {{user.email}}
+                  </div>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
