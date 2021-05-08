@@ -6,13 +6,25 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductSectionComponent } from './product-section/product-section.component';
 import { TitleComponent } from './title/title.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ProductSectionComponent,
-    TitleComponent
+    TitleComponent,
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    ProductsComponent,
+    ContactusComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

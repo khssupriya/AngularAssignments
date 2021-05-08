@@ -1,2 +1,5 @@
-![img1](https://github.com/khssupriya/AngularAssignments/blob/dynamic-data-amazon/screenshots/4_1.PNG)
-![img2](https://github.com/khssupriya/AngularAssignments/blob/dynamic-data-amazon/screenshots/4_2.PNG)
+![img1](https://github.com/khssupriya/AngularAssignments/blob/routing-amazon/screenshots/5_1.PNG)
+![img1](https://github.com/khssupriya/AngularAssignments/blob/routing-amazon/screenshots/5_2.PNG)
+![img1](https://github.com/khssupriya/AngularAssignments/blob/routing-amazon/screenshots/5_3.PNG)
+![img1](https://github.com/khssupriya/AngularAssignments/blob/routing-amazon/screenshots/5_4.PNG)
+![img1](https://github.com/khssupriya/AngularAssignments/blob/routing-amazon/screenshots/5_5.PNG)
