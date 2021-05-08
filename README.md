@@ -1,2 +1,2 @@
-![img1](https://github.com/khssupriya/AngularAssignments/blob/componentNesting-amazon/screenshots/4_1.PNG)
-![img2](https://github.com/khssupriya/AngularAssignments/blob/componentNesting-amazon/screenshots/4_2.PNG)
+![img1](https://github.com/khssupriya/AngularAssignments/blob/dynamic-data-amazon/screenshots/4_1.PNG)
+![img2](https://github.com/khssupriya/AngularAssignments/blob/dynamic-data-amazon/screenshots/4_2.PNG)
