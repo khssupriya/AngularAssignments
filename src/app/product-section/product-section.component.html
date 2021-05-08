@@ -1,13 +1,18 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-5 mb-5 m-0">
+        <div class="col" *ngFor="let n of products">
+                <app-product [data]="n" (myEvent)="addToCart($event)"></app-product>
+        </div>
+    </div>
+</div>
+
+
+
+
 <div class="d-flex justify-content-center">
     <div class="row m-0">
-        <div class="col-4">
-            <app-product></app-product>
-        </div>
-        <div class="col-4">
-            <app-product></app-product>
-        </div>
-        <div class="col-4">
-            <app-product></app-product>
+        <div class="col-4" *ngFor="let n of cart">
+            <app-product [data]="n"></app-product>
         </div>
     </div>
 </div>

@@ -1,17 +1,18 @@
 <div class="card" style="width: 18rem;">
     <div class="row mx-auto">
-        <img class="card-img-top" src="https://m.media-amazon.com/images/I/81jmILcHcUL._AC_UL480_FMwebp_QL65_.jpg" alt="Card image cap">
+        <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
     </div>
     <div class="card-body bg-light">
-      <h5 class="card-title">Harpa</h5>
-      <p>Women's A-Line Knee-Long Dress</p>
-      <p style="color: gold;"><i class="fas fa-star" *ngFor="let i of [].constructor(4)"></i><i class="far fa-star" *ngFor="let i of [].constructor(1)"></i></p>
+      <h5 class="card-title">{{data.title}}</h5>
+      <p>by {{data.author}}</p>
+      <p style="color: gold;"><i class="fas fa-star" *ngFor="let i of [].constructor(data.stars)"></i><i class="far fa-star" *ngFor="let i of [].constructor(5 - data.stars)"></i></p>
       <span class="d-inline-block">
-        <h4><i class="fas fa-rupee-sign text-danger">528</i></h4>
+        <h4><i class="fas fa-rupee-sign text-danger">{{data.discountPrice}}</i></h4>
       </span>
       <span class="d-inline-block">
-        <del><i class="fas fa-rupee-sign d-inline">2,200</i></del>
+        <del><i class="fas fa-rupee-sign d-inline">{{data.actualPrice}}</i></del>
       </span>
       <p>FREE Delivery by Amazon</p>
+      <!-- <button class="btn btn-primary" (click)="addToCart(data)">Add to cart</button> -->
     </div>
 </div>
