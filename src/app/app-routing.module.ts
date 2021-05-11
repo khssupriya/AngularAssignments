@@ -5,6 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {ProductSectionComponent} from './product-section/product-section.component'
+import {GenresComponent} from './genres/genres.component'
 
 const routes: Routes = [
   {
@@ -21,7 +24,21 @@ const routes: Routes = [
   },
   {
     path: 'products',
-    component: ProductsComponent
+    component: ProductsComponent,
+    children: [
+      {
+        path: 'textbooks',
+        component: ProductSectionComponent
+      }, 
+      {
+        path: 'genres',
+        component: GenresComponent
+      },
+      {
+        path: '',
+        component: GenresComponent
+      }
+    ]
   },
   {
     path: 'contactus',
@@ -31,6 +48,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

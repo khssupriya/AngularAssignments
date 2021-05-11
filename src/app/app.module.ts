@@ -12,6 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GenreNavbarComponent } from './genre-navbar/genre-navbar.component';
+import { GenresComponent } from './genres/genres.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     ProductsComponent,
     ContactusComponent,
-    NavbarComponent
+    NavbarComponent,
+    PageNotFoundComponent,
+    GenreNavbarComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,

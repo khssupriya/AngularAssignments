@@ -1,0 +1,16 @@
+.textcentered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 32, 56, 0.5);
+    padding: 5%;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+
+.custcontainer {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
