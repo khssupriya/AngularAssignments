@@ -1,12 +1,13 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../models/product.model';
+import {CartService} from '../cart.service'
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit{
   @Input()
   data: Product = {
     img: "",
@@ -17,10 +18,26 @@ export class ProductComponent {
     actualPrice: 0
   }
 
+  addedToCart: boolean = false;
+
+  constructor(private csObj: CartService) {
+  }
+
+  ngOnInit() {
+    this.addedToCart = this.csObj.cart.includes(this.data);
+  }
+
   @Output()
   myEvent = new EventEmitter();
   
-  addToCart(data: Product) {
-    this.myEvent.emit(data)
+  addToCart() {
+    this.myEvent.emit(this.data)
+    this.csObj.setData(this.data);
+    this.addedToCart = true;
+  }
+
+  removeFromCart() {
+    this.csObj.removeData(this.data);
+    this.addedToCart = false;
   }
 }

@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {ProductSectionComponent} from './product-section/product-section.component'
 import {GenresComponent} from './genres/genres.component'
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -32,18 +33,22 @@ const routes: Routes = [
       }, 
       {
         path: 'genres',
-        redirectTo: '/login',
-        pathMatch: 'full'
+        component: GenresComponent
       },
       {
         path: '',
-        component: GenresComponent
+        redirectTo: 'genres',
+        pathMatch: 'full'
       }
     ]
   },
   {
     path: 'contactus',
     component: ContactusComponent
+  },
+  {
+    path: 'cart',
+    component: CartComponent
   },
   {
     path: '',

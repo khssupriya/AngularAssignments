@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GenreNavbarComponent } from './genre-navbar/genre-navbar.component';
 import { GenresComponent } from './genres/genres.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GenresComponent } from './genres/genres.component';
     NavbarComponent,
     PageNotFoundComponent,
     GenreNavbarComponent,
-    GenresComponent
+    GenresComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

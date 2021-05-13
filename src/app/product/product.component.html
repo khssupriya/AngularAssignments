@@ -13,6 +13,7 @@
         <del><i class="fas fa-rupee-sign d-inline">{{data.actualPrice}}</i></del>
       </span>
       <p>FREE Delivery by Amazon</p>
-      <!-- <button class="btn btn-primary" (click)="addToCart(data)">Add to cart</button> -->
+      <button class="btn btn-primary" (click)="addToCart()" *ngIf="! addedToCart">Add to cart</button>
+      <button class="btn btn-primary" (click)="removeFromCart()" *ngIf="addedToCart">Remove from cart</button>
     </div>
 </div>
