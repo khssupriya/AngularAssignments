@@ -32,7 +32,8 @@ const routes: Routes = [
       }, 
       {
         path: 'genres',
-        component: GenresComponent
+        redirectTo: '/login',
+        pathMatch: 'full'
       },
       {
         path: '',
