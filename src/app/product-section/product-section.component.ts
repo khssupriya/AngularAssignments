@@ -16,7 +16,13 @@ export class ProductSectionComponent implements OnInit{
 
   ngOnInit() {
     // object initialization logic
-    this.products = this.dsObj.getData();
+    this.dsObj.getData().subscribe(data => {
+      this.products = data;
+    },
+    err => {
+      console.log("Something went wrong!")
+    }
+    );
   }
 
   cart: Product[] = []
